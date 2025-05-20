@@ -1,0 +1,20 @@
+// Kaza-Zack
+// report.txt
+
+/* This program creates a simple ASCII graph where
+ * negative values of y appear to the left of | (the vertical axis) and
+ *  positive values appear to the right.
+
+This makes it easy to see how the function behaves across different x-values. 
+
+* The user starts by entering the start and end values of x, along with the step size, which determines how much x
+ increases each time.
+* The program then calculates y for each x, displaying the values in a table while also generating a visual graph.
+
+The graph works by setting a central reference point (|) at column 50 and placing # symbols at positions corresponding to the 
+y-values, shifting left or right based on whether y is negative or positive.
+
+ Throughout the process, the program also keeps track of the highest and lowest y-values and displays them at the end.
+
+ To verify correctness, the user can compare the printed numerical values with expected results, check whether the
+ plotted points align properly, and observe if the max and min values make sense within the given range.

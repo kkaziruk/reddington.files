@@ -1,0 +1,10 @@
+// Kaza-Zack Kazirukanyo
+// Lab 1 Report
+
+This program calculates the area of a triangle based on the lengths of its three sides. The user is prompted to input the side lengths, and the program computes the area and displays the result. It provides a straightforward way for users to determine the area without manual calculations.
+
+The program is structured to take three inputs for the side lengths, perform the necessary calculations to determine the area, and then print the result. It uses the math.h library for calculations. While the program works as intended, it does not check if the inputs form a valid triangle, which is a limitation.
+
+I tested the program with valid inputs, like sides 3, 4, and 5, and it produced the correct result. It also worked well for other valid test cases. However, when invalid inputs, like sides that don’t form a triangle, were entered, the program still attempted to calculate an area, leading to incorrect results.
+
+Overall, the program functions well for valid inputs, but adding a check for input validity would improve its reliability. This project helped me understand how to structure a program and perform basic debugging in C.

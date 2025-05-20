@@ -1,0 +1,17 @@
+// Kaza-Zack Kazirukanyo
+// report.txt
+// Lab Report: Part 3 - MenuCalc
+
+The MenuCalc program is designed to provide a seamless and user-friendly experience for performing basic arithmetic operations.
+It begins by displaying a menu of available options, ensuring that users can only enter valid inputs.
+The program supports addition, subtraction, multiplication, and division, with built-in checks to prevent division by zero.
+Once an operation is selected, a switch statement processes the input and displays the result in a clear and formatted manner.
+To enhance usability, the program runs continuously in a loop, allowing users to perform multiple calculations until they choose to exit.
+
+To ensure reliability, MenuCalc has undergone thorough manual testing with a variety of sample inputs, including edge cases.
+Special attention has been given to error handling, verifying that the program responds appropriately to invalid inputs and division by zero.
+Ultimately, MenuCalc stands as an efficient and dependable calculator, balancing functionality with robust error management to create a smooth and intuitive user experience.
+
+The MenuCalc program is a simple command-line calculator for basic arithmetic operations. The user selects an operation from a menu, inputs two numbers, and receives the calculated result.
+The program runs in a loop until the user chooses to exit. Errors like invalid choices and division by zero are handled smoothly.
+

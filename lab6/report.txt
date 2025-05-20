@@ -1,0 +1,63 @@
+Lab 6: Conway’s Game of Life – Report
+Kaza-Zack Kazirukanyo
+------------------------------------------
+
+[1] Background
+
+Conway’s Game of Life is a simple simulation that creates complex behavior from a few basic rules. This lab was about implementing it efficiently, handling user input, and making sure the grid evolves correctly. It was also about debugging a board of Xs and spaces until they behaved like an actual simulation instead of random noise.
+
+-----------------------------------------
+
+[2] Program Internals
+
+    >> A) Structure
+    The program is split into three files:
+    [i] playlife.c – Handles input, processes user commands, and decides whether to run in interactive or batch mode.
+    [ii] lifefunc.c – Handles all board operations, including initializing, updating, and applying Game of Life rules.
+    [iii] lifefunc.h – Defines function prototypes and constants, keeping the code modular.
+
+    >> B) Data Representation
+    The board is a 40×40 2D array of characters:
+    -> 'X' represents a live cell.
+    -> ' ' represents a dead cell.
+    A border is drawn around the board for clarity, but it doesn’t affect simulation logic.
+
+    >> C) Game Logic
+    [i] Initialization: The board starts empty, ready for user input or batch file processing.
+    [ii] User Commands: In interactive mode, users modify the board and control how it evolves.
+    [iii] Simulation Step: The program calculates each cell’s next state based on its live neighbors and updates the board accordingly.
+
+    >> D) Double Buffering
+    To avoid updating the board mid-simulation (which can cause incorrect behavior), the program uses a temporary board to compute the next state before copying it back to the main board. This ensures smooth transitions and accurate rule application.
+
+-----------------------------------------
+
+[3] Verification of Correctness
+
+    >> A) Testing Strategy
+    [i] Unit Testing: Core functions, like counting neighbors and updating the board, were tested with known inputs to verify expected outputs.
+    [ii] Scenario Testing: Classic Game of Life patterns (Block, Blinker, Glider) were tested to confirm correct behavior over multiple iterations.
+    [iii] Boundary Conditions: Cells at the edges were checked to ensure they didn’t wrap around or break the rules of the game.
+
+    >> B) Known Patterns
+    To validate correctness, the program was tested using well-documented patterns:
+    [i] Block (Still Life): Should remain unchanged.
+    [ii] Blinker (Oscillator): Should toggle between two states every step.
+    [iii] Glider (Spaceship): Should move diagonally across the board over multiple steps.
+
+    >> C) Continuous Play and Stability
+    The program was run in continuous mode for extended periods to check performance and stability. The simulation remains smooth, and no memory leaks or crashes were observed.
+
+    >> D) Note for Testing:
+To ensure each pattern runs correctly, I’ve included separate scene files (scene1.txt to scene5.txt) for testing different behaviors—still life, oscillators, a glider, and an explosion. While I also created myscene.txt to combine them all in one run, it did not execute as expected. Running the individual scene files ensures each pattern can be properly observed in isolation.
+
+
+-----------------------------------------
+
+[4] Conclusion
+
+This project was about breaking a complex simulation into manageable components. Writing modular code and testing each part separately made debugging easier. The challenge was ensuring correctness at every step—neighbor counting, board updates, and real-time animation.
+
+The final implementation runs smoothly, handles user input effectively, and correctly follows Game of Life rules.
+
+EOT- Thanks for grading!

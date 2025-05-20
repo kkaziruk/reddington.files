@@ -1,0 +1,34 @@
+Kaza-Zack Kazirkanyo
+report.txt
+Lab Report - ndfootball.c
+
+Notre Dame football has over a century of history, and this program makes it easy to explore it. Users can check records, see losing seasons, find winning streaks, and even predict the future.
+
+From the user’s perspective, the program is simple. It runs a menu where they can select different options, enter a year or a number if needed, and instantly get the results. Whether they want to look up a specific record, find trends, or predict next season’s performance, everything is done with a few inputs. The interface loops back until they choose to exit, making it easy to explore multiple queries in one run.
+
+To verify that the program was correct, I tested different inputs and edge cases. For example, if a user requests a year outside the dataset, the program correctly warns them that no data is available. The streak function was checked to make sure it properly identified sequences without missing or adding extra years. And for prediction, I ran different values to ensure the weighting system worked as intended. Formatting was also a key part of verification—outputs needed to be structured clearly, without errors like misplaced commas or awkward breaks.
+
+// Tests that I ran:
+
+1) Test that the "exit" option (i.e Option 6) works correctly when '6' is entered;
+2) Test that when the user enters '1-5', the functions execute appropriately;
+3) Test that when Option 1 is selected, and the user enters a value which is not an appropriate entry, they are warned accordingly and the program does not have issues in terms of segmentation fault.
+4) Test the function in Option 2 that identifies years with losing records, and that the formatting code works appropriately.
+5) Test Option 4 to ensure that the streaks actually exist, (compared the function's output to an excel spreadsheet I had previously created). This test was crucial, as initially, my function returned the year AFTER the streak ended (for example, if the streak was from 2014-2016, my function returned 2014-2017)-- I was able to very easily fix this. 
+6) I tested every possible entry for situations where the user enters a negative number. I asked a TA whether or not I need to check for cases where the user enters letters, and was advised that this was not necessary. I am aware that there will be an infinite loop if this is the case.
+
+The last two options were the most interesting to work on because they weren’t just about pulling data—they required actual logic and pattern recognition.
+
+The streak detection function was tricky. It wasn’t enough to just print every good season. The challenge was figuring out where streaks started and ended without messing up the formatting. If I didn’t get it right, the output looked awkward, or worse, the streaks didn’t make sense. After some testing, I got it working so that each streak was properly tracked, and the output actually made sense to read.
+
+The prediction function was the real experiment. The goal was to estimate the next season based on past performance, but I wanted it to be interactive. So, I added three factors: recency weighting, a boost for undefeated seasons, and a penalty for past losing seasons. This meant users could tweak the prediction and see how different factors changed the outcome. It wasn’t perfect, but it added a fun, dynamic element instead of just spitting out an average.
+
+The biggest challenge overall was making sure everything was structured properly, especially with formatting. Small details, like making sure lists ended cleanly without a misplaced comma, took way longer than expected. But those details matter. The result is a program that does more than just retrieve data—it tells a story about Notre Dame football, past and future.
+
+
+
+
+
+
+
+
